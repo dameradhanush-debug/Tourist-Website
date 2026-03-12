@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Explore Incredible India</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:
+url("images/india-bg.jpg") center/cover fixed no-repeat;
+scroll-behavior:smooth;
+animation:bgMove 18s ease-in-out infinite alternate;
+}
+
+.header-btn{
+display:inline-block;
+padding:10px 18px;
+background:rgba(255,255,255,0.12);
+color:#fff8d6;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.55);
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+backdrop-filter:blur(4px);
+}
+
+.header-btn:hover{
+background:rgba(255,255,255,0.22);
+color:#ffffff;
+}
+
+nav{
+background:#333;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:14px 20px;
+display:inline-block;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#ff7e5f;
+}
+
+.hero{
+position:relative;
+min-height:420px;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 10px black;
+animation:zoom 10s infinite alternate;
+padding:30px 20px;
+}
+
+.hero-content{
+text-align:center;
+max-width:700px;
+}
+
+.hero h1{
+font-size:46px;
+margin-bottom:12px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.hero-top-btn{
+position:absolute;
+top:25px;
+right:25px;
+}
+
+.section-title{
+text-align:center;
+margin-top:40px;
+font-size:32px;
+color:white;
+text-shadow:0 2px 8px rgba(0,0,0,0.65);
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:40px;
+gap:30px;
+border-radius:18px;
+margin:30px auto;
+max-width:1200px;
+}
+
+.card{
+background:rgba(255,255,255,0.12);
+width:280px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 24px rgba(0,0,0,0.28);
+transition:transform 0.5s;
+animation:fadeInUp 1.5s;
+backdrop-filter:blur(6px);
+}
+
+.card:hover{
+transform:scale(1.08);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+text-align:left;
+background:transparent;
+}
+
+.card-content h3{
+margin-bottom:10px;
+color:#ffffff;
+text-shadow:0 2px 8px rgba(0,0,0,0.8);
+}
+
+.card-content p{
+font-size:14px;
+color:#f7f7f7;
+text-shadow:0 1px 6px rgba(0,0,0,0.75);
+}
+
+button{
+display:block;
+margin-left:auto;
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:#ff7e5f;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e65c40;
+}
+
+.booking-section{
+max-width:900px;
+margin:40px auto;
+padding:35px;
+background:rgba(255,255,255,0.14);
+border-radius:18px;
+box-shadow:0 8px 24px rgba(0,0,0,0.24);
+backdrop-filter:blur(6px);
+}
+
+.booking-section p{
+color:#ffffff;
+text-align:center;
+margin:10px 0 25px;
+text-shadow:0 1px 6px rgba(0,0,0,0.7);
+}
+
+.booking-form{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.booking-form input,
+.booking-form select{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:rgba(255,255,255,0.9);
+color:#222;
+}
+
+.booking-form button{
+grid-column:1 / -1;
+justify-self:end;
+margin-left:0;
+}
+
+footer{
+background:transparent;
+color:white;
+text-align:center;
+padding:25px 15px 35px;
+text-shadow:0 2px 8px rgba(0,0,0,0.75);
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoom{
+from{background-size:100%;}
+to{background-size:110%;}
+}
+
+@keyframes bgMove{
+from{
+background-position:center top;
+background-size:100%;
+}
+to{
+background-position:center bottom;
+background-size:108%;
+}
+}
+
+@media(max-width:768px){
+
+.hero{
+min-height:360px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.hero-top-btn{
+top:15px;
+right:15px;
+}
+
+.container{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#hotels">Hotels</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<a class="header-btn hero-top-btn" href="#places">Explore Places</a>
+<div class="hero-content">
+<h1>Explore Incredible India</h1>
+<p>Discover India's Best Tourist Destinations</p>
+</div>
+</section>
+
+<h2 class="section-title" id="places">Top Tourist Places</h2>
+
+<section class="container">
+
+<div class="card" onclick="window.open('goa-details.html','_blank')">
+<img src="images/goa.jpg" alt="Goa beach view">
+<div class="card-content">
+<h3>Goa</h3>
+<p>Beautiful beaches and vibrant nightlife.</p>
+</div>
+</div>
+
+<div class="card" onclick="window.open('kerala-details.html','_blank')">
+<img src="images/kerala.jpg" alt="Kerala backwaters">
+<div class="card-content">
+<h3>Kerala</h3>
+<p>Famous for backwaters and natural beauty.</p>
+</div>
+</div>
+
+<div class="card" onclick="window.open('manali-details.html','_blank')">
+<img src="images/manali.jpg" alt="Manali mountain landscape">
+<div class="card-content">
+<h3>Manali</h3>
+<p>Snowy mountains and adventure tourism.</p>
+</div>
+</div>
+
+</section>
+
+<h2 class="section-title" id="hotels">Best Hotels to Stay</h2>
+
+<section class="container">
+
+<div class="card" onclick="window.open('taj-hotel-details.html','_blank')">
+<img src="images/taj-hotel.jpg" alt="Luxury Taj Hotel">
+<div class="card-content">
+<h3>Taj Hotel</h3>
+<p>Luxury 5-star hotel with world class service.</p>
+<button onclick="event.stopPropagation(); location.href='#booking'">Book Now</button>
+</div>
+</div>
+
+<div class="card" onclick="window.open('beach-resort-details.html','_blank')">
+<img src="images/beach-resort.jpg" alt="Beach resort stay">
+<div class="card-content">
+<h3>Beach Resort</h3>
+<p>Relax and enjoy a sea view stay.</p>
+<button onclick="event.stopPropagation(); location.href='#booking'">Book Now</button>
+</div>
+</div>
+
+<div class="card" onclick="window.open('mountain-resort-details.html','_blank')">
+<img src="images/mountain-resort.jpg" alt="Mountain resort view">
+<div class="card-content">
+<h3>Mountain Resort</h3>
+<p>Peaceful stay surrounded by mountains.</p>
+<button onclick="event.stopPropagation(); location.href='#booking'">Book Now</button>
+</div>
+</div>
+
+</section>
+
+<section class="booking-section" id="booking">
+<h2 class="section-title">Booking Process</h2>
+<p>Fill in your details to continue your hotel reservation.</p>
+<form class="booking-form">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="date" required>
+<input type="date" required>
+<select required>
+<option value="">Select Hotel</option>
+<option>Taj Hotel</option>
+<option>Beach Resort</option>
+<option>Mountain Resort</option>
+</select>
+<input type="number" min="1" placeholder="Guests" required>
+<button type="submit">Continue Booking</button>
+</form>
+</section>
+
+<footer id="contact">
+<p>&copy; 2026 Incredible India Tourism Website</p>
+<p>Phone: +91 98765 43210</p>
+<p>Email: travel@incredibleindia.com</p>
+</footer>
+
+</body>
+</html>
